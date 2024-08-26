@@ -1,0 +1,101 @@
+.half {
+  &-row {
+    display: flex;
+  }
+
+  &-products {
+    width: 30%;
+    flex-shrink: 1;
+
+    &__list {
+      margin-top: 24px;
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    &__card {
+      width: calc(50% - 6px);
+      height: 180px;
+      box-shadow: 0px 3px 15px hsla(0, 0%, 85%, 0.3);
+      background-color: #fff;
+      @include center();
+      flex-direction: column;
+      overflow: hidden;
+      border-radius: 8px;
+      cursor: pointer;
+      img {
+        width: 100%;
+      }
+
+      &.active {
+        border: 2px solid green;
+      }
+
+      &.disabled {
+        cursor: not-allowed;
+        img {
+          opacity: 0.3;
+        }
+      }
+    }
+  }
+
+  &-main {
+    flex-grow: 1;
+
+    &__image {
+      width: 100%;
+      height: 310px;
+      display: flex;
+
+      &_left,
+      &_right {
+        width: 50%;
+        height: 100%;
+        overflow: hidden;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      &_left {
+        img {
+          object-position: -60% center;
+        }
+      }
+
+      &_right {
+        img {
+          object-position: 160% center;
+        }
+      }
+    }
+
+    &__button {
+      background: #000;
+      border: none;
+      border-radius: 60px;
+      text-align: center;
+      color: #fff;
+      font-weight: 700;
+      font-size: 16px;
+      padding: 15px 25px;
+      margin: 1em 25px;
+      width: calc(100% - 50px);
+      cursor: pointer;
+      max-width: 400px;
+      display: block;
+      transition: 0.2s ease;
+
+      &:disabled {
+        opacity: 0.3;
+        cursor: not-allowed;
+      }
+    }
+  }
+}

@@ -1,0 +1,46 @@
+          
+  .Auth_auth{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    height: calc(100vh - calc(100px + 1rem));
+    max-width: 400px;
+    margin: auto;
+    &_container{
+    display: block;
+    padding: 25px;
+    width: 100%;
+    }
+    &_title{
+    text-align: center;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+
+      
+    }
+    &_placeholder{
+      color: #757575;
+    }
+    &_phone{
+      width: 100%;
+    border: none;
+    border-radius: 12px;
+    padding: 10px;
+    margin-bottom: 1rem;
+    background: #f4f4f4;;
+
+    }
+}
+.Auth_phone.Auth_placeholder input{
+  border: none;
+  width: 350px;
+  height: 49px;
+  margin: 0 0 0 16px;
+  padding: 10px;
+
+}

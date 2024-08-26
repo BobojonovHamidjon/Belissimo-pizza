@@ -1,0 +1,42 @@
+.delivery {
+  margin-bottom: 24px;
+  &-row {
+    @include flex(center, space-between);
+    gap: 25px;
+  }
+
+  &-left {
+    width: 45%;
+  }
+
+  &-right {
+    width: 55%;
+  }
+
+  &-branch {
+    width: 100%;
+    padding: 10px 15px;
+    border-radius: 10px;
+    @include flex(center, space-between);
+    background-color: #fffbee;
+    border: 1px solid #ffc600;
+
+    &__text {
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 18.298px;
+      color: #ffc600;
+    }
+
+    &__icon{
+        width: 14px;
+        height: 14px;
+        
+
+        svg{
+            width: 100%;
+            height: 100%;
+        }
+    }
+  }
+}

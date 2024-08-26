@@ -1,0 +1,81 @@
+.footer {
+    background:#262a2c;
+    &-main{
+      max-width: 1180px;
+    margin: 0 auto;
+    padding: 52px 20px 20px;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    align-items: flex-start;
+    justify-content: space-between;
+    grid-gap: 10px;
+    gap: 30px;
+    }
+    &-lower{
+      width: 100%;
+      padding: 30px;
+      text-align: center;
+      color: aliceblue;
+    }
+    &-logo{
+      margin-bottom: 30px;
+    }
+    &-logo h4{
+      color: #fff;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 1.2222222222;
+    text-transform: uppercase;
+    font-weight: 400;
+    }
+    &-ListBlock{
+      margin: 0 auto;
+    max-width: 160px;
+    padding: 20px;
+    
+    &_text li{
+      color: hsla(0,0%,100%,.5);
+      font-size: 16px;
+    }
+    }
+    &-ListBlock li{
+      margin: 7px 0 10px;
+      color:silver;
+
+    }
+    &-socials{
+      margin: 0 auto 30px;
+    text-align: center;
+    order: 1;
+    }
+    &-listTitle{
+      font-size: 16px;
+    color: #fff;
+    margin-bottom: 20px;
+    font-weight: 400;
+    }
+    &-socialsList{
+      display: flex;
+    justify-content: space-between;
+    gap: 7px;
+    }
+    &-payMethodBlock{
+      display: flex;
+    width: 100%;
+    gap: 18px 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+    
+    }
+    &-payMethods img{
+      max-width: 100px;
+      height: 74px;
+      display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-basis: calc(50% - 15px);
+    }
+  }
+  
+ 

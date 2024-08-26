@@ -1,0 +1,51 @@
+.select {
+  width: 100%;
+  height: auto;
+  position: relative;
+
+  &-button {
+    color: #000;
+    padding: 10px 0;
+    width: 100%;
+    background-color: #ffc600;
+    border: #ffc600;
+    border-radius: 60px;
+    font-weight: 600;
+    font-size: 15px;
+    height: 52px;
+    @include center();
+    @include trn();
+
+    &:disabled{
+        opacity: 0.3;
+        cursor: not-allowed;
+    }
+  }
+
+  &-list{
+    position: absolute;
+    top: calc(100% + 4px);
+    left: calc((900 * 25 / 100)) * -1 + 1px;
+    width: calc((900 * 49 / 100)) + 1px;
+    height: max-content;
+    background-color: #fff;
+    z-index: 10;
+    opacity: 0;
+    visibility: hidden;
+    @include trn();
+  }
+
+  &-list.active{
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &-item{
+    cursor: pointer;
+
+
+    &.active{
+        color: red;
+    }
+  }
+}

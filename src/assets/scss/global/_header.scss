@@ -1,0 +1,95 @@
+.header {
+  padding: 15px 0;
+
+  &-row {
+    @include flex(center, space-between);
+  }
+
+  &-logo {
+    width: 180px;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &-info {
+    @include flex(center, flex-start);
+    gap: 12px;
+    max-width: 230px;
+
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+
+    &__row {
+      @include flex(center, unset);
+    }
+
+    &__box {
+      background-color: $light-green;
+      height: 48px;
+      min-width: 48px;
+      max-width: 210px;
+      @include center();
+      gap: 8px;
+      padding: 13px 15px;
+
+      &:has(svg) {
+        padding: 4px 10px;
+      }
+    }
+
+    &__title {
+      &,
+      &_small {
+        font-size: 18px;
+        font-weight: 600;
+        color: $green-color;
+      }
+    }
+
+    &__toptitle {
+      font-size: 13px;
+      font-weight: 400;
+    }
+
+    &__text {
+      color: #3f3f3f;
+      font-size: 10px;
+      font-weight: 400;
+    }
+  }
+
+  &-buttons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  &-halal {
+    width: 60px;
+    height: 60px;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &-button {
+    @include center;
+    padding: 11px 24px;
+    border-radius: 30px;
+    background: $green-color;
+    color: $white-color;
+    font-size: 16px;
+    font-weight: 600;
+    @include trn();
+
+    &:hover{
+        background-color: $green-color-hover;
+    }
+  }
+}

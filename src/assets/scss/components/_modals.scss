@@ -1,0 +1,277 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  visibility: hidden;
+
+  &.open {
+    visibility: visible;
+  }
+
+  &-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(3px);
+    opacity: 0;
+    visibility: hidden;
+    @include trn();
+  }
+
+  &.open &-bg {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &-panel {
+    position: absolute;
+    top: 150%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $white-color;
+    border-radius: 28px;
+    padding: 24px;
+    min-width: 440px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.05);
+
+    &__button {
+      width: 100%;
+      font-size: 19px;
+      text-align: left;
+
+      &:hover {
+        text-decoration: 2px underline;
+      }
+    }
+
+    &__item {
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  &.open &-panel {
+    top: 50%;
+  }
+}
+
+.product-modal {
+  .modal {
+    &-panel {
+      width: 900px;
+      height: 580px;
+      background-color: #fff;
+      border-radius: 32px;
+      display: flex;
+      column-gap: 25px;
+    }
+  }
+
+  &__add {
+    background: #006f4c;
+    color: #fff;
+    border: none;
+    border-radius: 60px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 16px;
+    padding: 15px 25px;
+    margin: 1em 25px;
+    width: calc(100% - 50px);
+    cursor: pointer;
+    display: block;
+    max-width: 400px;
+    transition: 0.2s ease;
+  }
+
+  &__content {
+    width: 47%;
+  }
+
+  &__row {
+    width: 53%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  &__info {
+    padding-bottom: 16px;
+    margin-bottom: 16px;
+    border-bottom: 1px solid rgb(226, 228, 228);
+  }
+
+  &__image {
+    width: 100%;
+    height: 240px;
+    margin-bottom: 16px;
+
+    img {
+      display: block;
+      width: 70%;
+      height: 100%;
+      margin: 0 auto;
+      object-fit: cover;
+    }
+  }
+
+  &__title {
+    font-family: inherit;
+    line-height: 140%;
+    color: #000;
+    margin-bottom: 10px;
+
+    &_large {
+      font-size: 24px;
+    }
+
+    &_medium {
+      font-size: 18px;
+    }
+
+    &_small {
+      font-size: 16px;
+    }
+  }
+
+  &__subtitle {
+    font-size: 18px;
+    color: #828282;
+  }
+
+  &__selected {
+    &_item {
+      display: flex;
+      gap: 4px;
+
+      &:not(:last-child) {
+        margin-bottom: 16px;
+      }
+    }
+
+    .product-modal__title {
+      margin-bottom: 0;
+    }
+  }
+
+  &__size {
+    &_row {
+      margin-top: 12px;
+      display: flex;
+      gap: 12px;
+    }
+
+    &_col {
+      width: 50%;
+    }
+
+    .radiobuttons {
+      width: 100%;
+    }
+  }
+
+  &__ingredient {
+    margin-top: 24px;
+  }
+}
+
+.ingredient {
+  &-title__row {
+    @include flex(center, space-between);
+  }
+
+  &-badge {
+    background: #ffc600;
+    border-radius: 100px;
+    padding: 8px 15px;
+    font-weight: 600;
+    font-size: 14px;
+  }
+
+  &-list {
+    padding: 12px 1px;
+    height: max-content;
+    display: grid;
+    grid-template-columns: repeat(3, calc(33.33% - 7px));
+    grid-gap: 10px;
+    gap: 10px;
+    max-width: 100%;
+    padding: 12px 1px;
+    position: relative;
+  }
+
+  &-card {
+    background: #fff;
+    box-sizing: border-box;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    border: 2px solid transparent;
+    border-radius: 16px;
+    width: 100%;
+    // height: 124px;
+    padding: 12px 10px;
+    text-align: center;
+    position: relative;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+
+    &.active {
+      border-color: rgba(0, 111, 76, 0.72);
+    }
+
+    &__image {
+      width: 40px;
+      position: relative;
+      margin: 0 auto 10px;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    &__title,
+    &__price {
+      font-size: 12px;
+    }
+
+    &__button {
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      top: 8px;
+      left: 8px;
+      border-radius: 50%;
+      background-color: #f2f2f2;
+      @include trn();
+
+      svg {
+        @include trn();
+      }
+    }
+
+    &.active &__button {
+      background-color: #006f4c;
+
+      svg {
+        transform: rotate(45deg);
+      }
+
+      path {
+        fill: #fff;
+      }
+    }
+  }
+}

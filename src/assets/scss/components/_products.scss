@@ -1,0 +1,13 @@
+.products{
+    margin: 48px 0;
+
+    &-title{
+        margin-bottom: 20px;
+    }
+
+    &-list{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+}

@@ -1,0 +1,48 @@
+.products-card {
+  width: calc(25% - 12px);
+  box-shadow: 5px 2px 30px hsla(257, 8%, 83%, 0.3);
+  padding: 15px;
+  border-radius: 16px;
+  cursor: pointer;
+  background-color: #fff;
+  @include trn();
+
+  &__link {
+    width: calc(25% - 12px);
+   
+    .products-card {
+      width: 100%;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: 160px;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__title {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+
+  &__subtitle {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+
+  &__discount {
+    display: flex;
+    gap: 12px;
+  }
+
+  &__old {
+    color: #8d8d8d;
+    font-weight: 400;
+    font-size: 14px;
+  }
+}
