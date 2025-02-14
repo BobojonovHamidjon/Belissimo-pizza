@@ -8,6 +8,7 @@ function Categories({ categories }) {
   const categoriesRef = useRef();
   const [activeCategory, setActiveCategory] = useState(null);
   const navigate = useNavigate();
+  const [list, setList] = useState([]);
 
   useEffect(() => {
     let firstOffset = categoriesRef.current.offsetTop;
@@ -26,6 +27,7 @@ function Categories({ categories }) {
 
   const handleSetActive = (to) => {
     setActiveCategory(list.find((item) => item.value === to).value);
+    
   };
 
   function handleNavigate() {

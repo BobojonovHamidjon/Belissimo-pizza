@@ -39,13 +39,13 @@ function Footer(){
             </div>
             <ul className='footer-payMethodBlock'>
                 <li className="footer-payMethods">
-                   <img src="../../../../public/images/Paymeuz_logo.png" alt="" />
+                   <img src="/images/Paymeuz_logo.png" alt="payMethod" />
                 </li>
                 <li className="footer-payMethods">
-                   <img src="../../../../public/images/uzcard_logo.png" alt="" />
+                   <img src="/images/uzcard_logo.png" alt="payMethod" />
                 </li>
                 <li className="footer-payMethods">
-                  <img src="../../../../public/images/Click_logo.png" alt="" />
+                  <img src="/images/Click_logo.png" alt="payMethod" />
                 </li>
             </ul>
          </div>
